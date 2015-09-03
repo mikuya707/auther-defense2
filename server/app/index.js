@@ -2,6 +2,9 @@
 
 var app = require('express')();
 var path = require('path');
+var filter = require('content-filter');
+
+app.use(filter());
 
 app.use(require('./logging.middleware'));
 
